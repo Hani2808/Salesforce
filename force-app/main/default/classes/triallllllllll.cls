@@ -3,6 +3,7 @@ public with sharing class Triallllllllll {
         List<Account> accList = new List<Account>();
         for(Account a : accList) {
             a.Name = 'HaniVerma';
+            a.Phone = '9758445254';
         }
     }
 }
