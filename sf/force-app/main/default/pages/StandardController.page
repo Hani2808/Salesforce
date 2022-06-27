@@ -1,0 +1,7 @@
+<apex:page standardController="Contact" extensions="conEx" >
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+            {!message}<p/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

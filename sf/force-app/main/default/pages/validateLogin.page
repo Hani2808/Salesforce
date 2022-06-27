@@ -1,0 +1,50 @@
+<apex:page standardcontroller="Account">
+  <apex:form >
+        <apex:pageBlock >
+                User Name  : <apex:inputText id="email"/>
+          
+                <apex:commandButton onclick="validateFunction('{!$Component.email}')" value=" Validate UserName"/>
+        
+               Password : <apex:inputText id="pass"/>
+               <apex:commandButton onclick="validateFunction2('{!$Component.Pass}')" value=" Validate Password"/>
+        </apex:pageBlock>
+  </apex:form>
+  
+  <!-- Java script starts Here -->
+  <script>
+   function validateFunction(email){
+   var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+       var emailval= document.getElementById(email).value;
+         if(emailval== ''){
+            alert('Please enter username to validate');
+            }
+           else if(emailval.match(mailformat))
+{
+alert('Valid email address!');
+         } 
+         else
+{
+alert('You have entered an invalid email address!');
+}
+         
+  }
+  
+  
+  function validateFunction2(pass){
+  var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+    var passval= document.getElementById(pass).value;
+if(passval.match(decimal)) 
+{ 
+alert('Password is correct')
+}
+  else if(passval== ''){
+            alert('Please enter Password to validate');
+            }
+         else
+{
+alert('You have entered an invalid Password!');
+}         
+  }
+  </script> 
+ <!-- java script ends here -->  
+</apex:page>

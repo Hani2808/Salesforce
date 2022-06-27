@@ -1,0 +1,17 @@
+<apex:page standardController="Merchandise__c" extensions="atest">
+   <apex:form >
+   <apex:pageBlock >
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!Save}"/>
+            <apex:commandButton value="Save and New" action="{!News}"/>
+            <apex:commandButton value="Cancel" action="{!cancel}"/>
+        </apex:pageBlockButtons>
+       <apex:pageBlockSection columns="2">
+            <apex:inputField value="{!mer.Name}"/>
+            <apex:inputField value="{!mer.Description__c}"/>
+            <apex:inputField value="{!mer.Price__c}"/>
+            <apex:inputField value="{!mer.Total_Inventory__c}"/>
+       </apex:pageBlockSection>
+       </apex:pageBlock>
+    </apex:form>
+</apex:page>

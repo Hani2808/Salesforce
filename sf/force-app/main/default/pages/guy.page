@@ -1,0 +1,4 @@
+<apex:page standardController="Contact" >
+  <h1>Hello {!Contact.name}.</h1>
+   This record has been created on {!Contact.CreatedDate}
+</apex:page>

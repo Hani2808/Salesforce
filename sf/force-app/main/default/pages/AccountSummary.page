@@ -1,0 +1,6 @@
+<apex:page >
+    <apex:pageBlock title="Account Summary">
+        <apex:pageBlockSection >
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

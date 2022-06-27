@@ -1,0 +1,73 @@
+<apex:page standardController="Opportunity" renderAs="pdf" >
+    <table>
+     <h1> Opportunity Detail </h1>
+       
+        <tr>
+            <td>
+                Account Name:
+            </td>
+            <td style="font-weight: bold">
+                {!Opportunity.Account.Name}
+            </td>
+        </tr>
+    <tr>
+            <td >
+                Opportunity Name:
+            </td>
+            <td style="font-weight: bold">
+                {!Opportunity.Name}
+            </td>
+            <td >
+                Close Date:
+            </td>
+            <td style="font-weight: bold">
+                <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                    <apex:param value="{!Opportunity.CloseDate}" /> 
+                </apex:outputText>
+            </td>
+</tr>
+<tr>
+            <td >
+                Opportunity Owner:
+            </td>
+            <td style="font-weight: bold">
+                {!Opportunity.Owner.Name}
+            </td>
+    
+            <td >
+                Expected Revenue:
+            </td>
+            <td style="font-weight: bold">
+                {!Opportunity.ExpectedRevenue}
+            </td>
+</tr>
+<tr>
+            <td >
+                Type:
+            </td>
+            <td style="font-weight: bold">
+                {!Opportunity.Type}
+            </td>
+            <td >
+                Stage
+            </td>
+            <td style="font-weight: bold">
+                {!Opportunity.StageName}
+            </td>
+</tr>
+ <tr>
+            <td >
+                Lead Source:
+            </td>
+            <td style="font-weight: bold">
+                {!Opportunity.LeadSource}
+            </td>
+            <td >
+                Probability:
+            </td>
+            <td style="font-weight: bold">
+                {!Opportunity.Probability}
+            </td>
+</tr> 
+    </table>
+</apex:page>

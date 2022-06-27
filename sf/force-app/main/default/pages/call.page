@@ -1,0 +1,11 @@
+<apex:page controller="Calculator1">
+<apex:form >
+NUMBER 1:<apex:inputText value="{!number1}"/>
+Operator:<apex:inputText value="{!operator}"/>
+Number 2:<apex:inputText value="{!number2}"/>
+<apex:commandButton value="ShowResult" action="{!calculation}"></apex:commandbutton>
+    <apex:pageBlock title="ANSWER">
+    <b>Output is:<apex:outputText value="{!result}"></apex:outputText></b>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>
